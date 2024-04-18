@@ -1,6 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
+<html>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
@@ -29,29 +28,26 @@
       </div>
     </div>
     <div class="Recherche">
-    <form action="nav.php" method="POST">
+    <form action="" method="POST">
         <label for="Info"></label>
-        <input type="text" name="Info" />
-        <input type="submit" value="Recherher" />
+        <input type="text" name="rechercher" />
+        <input type="submit" value="Cherche" />
     </div>
-<?php
-try{
-  $bdd = new PDO('mysql:host=localhost;dbname=projet_php_alicia_foune;charset=utf8', "root",'');
-   
-}catch (Exception $e) {
-  die('Erreur :' . $e->getMessage());
-}
-$recherche = $_POST['recherche'];
+  </body>
+    </form>
+</html>
 
-  $query= "SELECT * FROM films WHERE realisateur like $recherche or title like $recherche" ;
-  $exec = $bdd->prepare($query);
-  $exec->execute(["."=> $nom]);
-  $stocks = $exec->fetchAll();
-  foreach ($stocks as $stock){
-      echo $stock["title"]. "<br>";
-      echo $stock["realisateur"]. "<br>";
-      echo $stock["img"]." <br>";
+<?php
+require_once "config.php";
+
+$recherche =  isset($_POST['rechercher']) ? $_POST['rechercher'] : '';
+
+
+  $query=$connexion->query( "SELECT * FROM films WHERE realisateur like '%$recherche%' or title like '%$recherche%'");
+
+    while( $resultat = mysqli_fetch_array($query)){
+      echo $resultat["title"]. "<br>";
+      echo $resultat["realisateur"]. "<br>";
+      echo $resultat["img"]." <br>";
   }
 ?>
-  </body>
-</html>

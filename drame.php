@@ -36,88 +36,89 @@
     <main>
       <div class="movie">
         <div class="container">
-          <div class="item-1_img"></div>
-          <div class="item-1_info">
+          <div class="item_img"></div>
+          <div class="item_info">
             <h1>Titres</h1>
           </div>
         </div>
         <div class="container">
-          <div class="item-2_img"></div>
-          <div class="item-2_info"></div>
+          <div class="item_img"></div>
+          <div class="item_info"></div>
         </div>
         <div class="container">
-          <div class="item-3_img"></div>
-          <div class="item-3_info"></div>
+          <div class="item_img"></div>
+          <div class="item_info"></div>
         </div>
         <div class="container">
-          <div class="item-4_img"></div>
-          <div class="item-4_info"></div>
+          <div class="item_img"></div>
+          <div class="item_info"></div>
         </div>
         <div class="container">
-          <div class="item-5_img"></div>
-          <div class="item-5_info"></div>
+          <div class="item_img"></div>
+          <div class="item_info"></div>
         </div>
         <div class="container">
-          <div class="item-6_img"></div>
-          <div class="item-6_info"></div>
+          <div class="item_img"></div>
+          <div class="item_info"></div>
         </div>
         <div class="container">
-          <div class="item-7_img"></div>
-          <div class="item-7_info"></div>
+          <div class="item_img"></div>
+          <div class="item_info"></div>
         </div>
         <div class="container">
-          <div class="item-8_img"></div>
-          <div class="item-8_info"></div>
+          <div class="item_img"></div>
+          <div class="item_info"></div>
         </div>
         <div class="container">
-          <div class="item-9_img"></div>
-          <div class="item-9_info"></div>
+          <div class="item_img"></div>
+          <div class="item_info"></div>
         </div>
         <div class="container">
-          <div class="item-10_img"></div>
-          <div class="item-10_info"></div>
+          <div class="item_img"></div>
+          <div class="item_info"></div>
         </div>
         <div class="container">
-          <div class="item-11_img"></div>
-          <div class="item-11_info"></div>
+          <div class="item_img"></div>
+          <div class="item_info"></div>
         </div>
         <div class="container">
-          <div class="item-12_img"></div>
-          <div class="item-12_info"></div>
+          <div class="item_img"></div>
+          <div class="item_info"></div>
         </div>
         <div class="container">
-          <div class="item-13_img"></div>
-          <div class="item-13_info"></div>
+          <div class="item_img"></div>
+          <div class="item_info"></div>
         </div>
         <div class="container">
-          <div class="item-14_img"></div>
-          <div class="item-14_info"></div>
+          <div class="item_img"></div>
+          <div class="item_info"></div>
         </div>
         <div class="container">
-          <div class="item-15_img"></div>
-          <div class="item-15_info"></div>
+          <div class="item_img"></div>
+          <div class="item_info"></div>
         </div>
         <div class="container">
-          <div class="item-16_img"></div>
-          <div class="item-16_info"></div>
+          <div class="item_img"></div>
+          <div class="item_info"></div>
         </div>
         <div class="container">
-          <div class="item-17_img"></div>
-          <div class="item-17_info"></div>
+          <div class="item_img"></div>
+          <div class="item_info"></div>
         </div>
         <div class="container">
-          <div class="item-18_img"></div>
-          <div class="item-18_info"></div>
+          <div class="item_img"></div>
+          <div class="item_info"></div>
         </div>
         <div class="container">
-          <div class="item-19_img"></div>
-          <div class="item-19_info"></div>
+          <div class="item_img"></div>
+          <div class="item_info"></div>
         </div>
         <div class="container">
-          <div class="item-20_img"></div>
-          <div class="item-20_info"></div>
+          <div class="item_img"></div>
+          <div class="item_info"></div>
         </div>
       </div>
     </main>
+    <?php require_once "config.php"; ?>
   </body>
 </html>

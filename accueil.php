@@ -98,6 +98,7 @@
         </div>
       </div>
     </main>
+    <?php require_once "config.php"; ?>
     <footer>
       <div class="footer"></div>
     </footer>
