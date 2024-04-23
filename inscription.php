@@ -7,7 +7,7 @@ include "config/commandes.php";
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,8 +22,7 @@ include "config/commandes.php";
     <div class="container">
       <div class="row">
         <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-white">Projet PHP</h4>
-        </div>
+        <h4 class="text-white"><a href="index.php">Projet PHP</a></h4>        </div>
         <div class="col-sm-4 offset-md-1 py-4">
           <h4 class="text-white">Menu</h4>
           <ul class="list-unstyled">

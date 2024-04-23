@@ -35,19 +35,6 @@ function verifUser($pseudo, $passwordsaisi){
 //FIN GESTION UTILISATEURS
 
 
-
-function modifier($image, $nom, $prix, $desc, $id)
-{
-  if(require("connexion.php"))
-  {
-    $req = $access->prepare("UPDATE produits SET `image` = ?, nom = ?, prix = ?, description = ? WHERE id=?");
-
-    $req->execute(array($image, $nom, $prix, $desc, $id));
-
-    $req->closeCursor();
-  }
-}
-
 function afficherUnProduit($id)
 {
 	if(require("connexion.php"))
@@ -129,19 +116,6 @@ function afficher_1($id_film)
 	}
 }
 
-function supprimer($id)
-{
-	if(require("connexion.php"))
-	{
-		$req=$access->prepare("DELETE FROM produits WHERE id_film=?");
-
-		$req->execute(array($id));
-
-		$req->closeCursor();
-	}
-}
-
-
 
 //Retourne le panier actif
 function return_cart($id_user){
@@ -191,13 +165,13 @@ function show_cart_details($id_cart){
 	}
 };
 //Suppression d'un panier
-function delete_cart_details($id_cart){
+function delete_cart_details($id_cart,$pseudo){
 	if(require("connexion.php"))
 	{
 		//Supression details
-		$req=$access->prepare("DELETE FROM cart_details WHERE id_cart=?");
+		$req=$access->prepare("DELETE FROM cart_details WHERE id_cart=$id_cart and pseudo='$pseudo'");
 
-		$req->execute(array($id_cart));
+		$req->execute();
 		return true;
 		$req->closeCursor();
 	}
@@ -220,25 +194,25 @@ function total_price($id_cart){
     }	
 };
 //Ajoute un film
-function add_films($id_cart,$id_film,$title,$price){
+function add_films($id_cart,$id_film,$title,$price,$pseudo){
     if(require("connexion.php"))
     {
-      $req = $access->prepare("INSERT INTO cart_details (id_cart,id_film,title,price) VALUES (?,?,?,?)");
+      $req = $access->prepare("INSERT INTO cart_details (id_cart,id_film,title,price,pseudo) VALUES (?,?,?,?,?)");
 
-      $req->execute(array($id_cart,$id_film,$title,$price));
+      $req->execute(array($id_cart,$id_film,$title,$price,$pseudo));
 	  return true;
       $req->closeCursor();
     }	
 };
 
 //Supprime un film
-function delete_films($id_ligne){
+function delete_films($id_ligne,$pseudo){
 		if(require("connexion.php"))
 		{
 		//Supression details
-		$req=$access->prepare("DELETE FROM cart_details WHERE id_lignes=?");
+		$req=$access->prepare("DELETE FROM cart_details WHERE id_lignes=$id_ligne and pseudo='$pseudo'");
 
-		$req->execute(array($id_ligne));
+		$req->execute();
 		return true;
 		$req->closeCursor();
 		}

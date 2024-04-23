@@ -15,7 +15,8 @@ if(isset($_GET['id_film'])){
             $id=$id_film;
             $price=$films['price'];
             $id_cart=(int)$_SESSION['cart'];
-            add_films($id_cart,$id_film,$title,$price);
+            $pseudo=$_SESSION['pseudo'];
+            add_films($id_cart,$id_film,$title,$price,$pseudo);
             total_price($id_cart);
             header('Location: index.php');
         }
